@@ -1,6 +1,6 @@
 # United Energy EnergyEasy API (unofficial)
 
-This is an unofficial API implementation to access personal electricity usage data from the United Energy website.   
+This is an unofficial API implementation to access personal electricity usage data from the [United Energy website](https://energyeasy.ue.com.au/).   
 
 ## Potential Uses
 - Get data every data with a cron job
@@ -10,7 +10,7 @@ This is an unofficial API implementation to access personal electricity usage da
 1. Have a United Energy account (email and password)
 2. Install requests with `pip install requests` or use `poetry shell` 
 
-## Example Code
+## Example Code (using [UnitedEnergy.py](https://github.com/Blake-Haydon/United-Energy-EnergyEasy-API-unofficial-/blob/master/UnitedEnergy.py))
 Authenticate with your email and password by creating an object
 ```
 import UnitedEnergy

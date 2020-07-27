@@ -1,1 +1,3 @@
-__version__ = "0.1.0"
+from .UnitedEnergy import API
+
+__version__ = "0.1.1"

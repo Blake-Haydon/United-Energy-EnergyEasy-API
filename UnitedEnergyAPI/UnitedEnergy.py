@@ -59,7 +59,7 @@ class API:
         return self._fetch_data(TIME_PERIOD, years_ago)
 
     def season_data(self, seasons_ago: int) -> dict:
-        """ Returns a dictionary containing the data from some number of seasons_ago. The number of seasons_ago >= 0. """
+        """ Returns a dictionary containing the data from some number of seasons_ago. The number of seasons_ago >= 0."""
         TIME_PERIOD = "season"
         return self._fetch_data(TIME_PERIOD, seasons_ago)
 

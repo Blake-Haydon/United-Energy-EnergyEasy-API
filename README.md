@@ -1,6 +1,6 @@
-# United Energy EnergyEasy API (unofficial)
+# United Energy EnergyEasy API
 
-This is an unofficial API implementation to access personal electricity usage data from the [United Energy website](https://energyeasy.ue.com.au/).   
+This is an API implementation to access personal electricity usage data from the [United Energy website](https://energyeasy.ue.com.au/).   
 
 ## Potential Uses
 - Get data every data with a cron job

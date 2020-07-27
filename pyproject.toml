@@ -1,8 +1,8 @@
 [tool.poetry]
 name = "UnitedEnergy"
-version = "0.1.1"
+version = "0.1.0"
 description = "United energy API to access personal electricity usage"
-authors = ["Blake Haydon blake.a.haydon@gmail.com"]
+authors = ["Blake Haydon <blake.a.haydon@gmail.com>"]
 license = "MIT"
 
 [tool.poetry.dependencies]

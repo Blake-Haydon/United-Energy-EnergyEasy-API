@@ -8,7 +8,15 @@ This is an API implementation to access personal electricity usage data from the
 
 ## Set Up
 1. Have a United Energy account (email and password)
-2. Install requests with `pip install requests` or use `poetry shell` 
+2. Install via pip or poetry
+
+```
+# Using pip
+pip install git+https://github.com/Blake-Haydon/United-Energy-EnergyEasy-API.git
+
+# Using Poetry
+poetry add git+https://github.com/Blake-Haydon/United-Energy-EnergyEasy-API.git 
+```
 
 ## Example Code
 ```

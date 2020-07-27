@@ -34,7 +34,6 @@ class API:
 
         unix_time = int(time.time())
         data_url = f"https://energyeasy.ue.com.au/electricityView/period/{time_period}/{time_ago}?_{unix_time}"
-        print(data_url)
         result = self.requests_session.get(data_url)
         return json.loads(result.text)
 

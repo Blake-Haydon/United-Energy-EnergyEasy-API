@@ -37,6 +37,21 @@ class API:
         result = self.requests_session.get(data_url)
         return json.loads(result.text)
 
+    def refresh_data(self) -> None:
+        """ Force refresh to get the most current data. The current day data may not be accurate (see website). """
+        latest_interval = self.day_data(0)["latestInterval"]
+        unix_time = int(time.time())
+
+        # I think this url checks if the data needs updating
+        check_refresh_url = f"https://energyeasy.ue.com.au/electricityView/latestData?lastKnownInterval={latest_interval}&_={unix_time}"
+        # I think this prompts the server to update its data
+        real_refresh_url = f"https://energyeasy.ue.com.au/electricityView/isElectricityDataUpdated?lastKnownInterval={latest_interval}&_={unix_time}"
+        
+        # Run the request to see if the data needs to be updated
+        responce = self.requests_session.get(check_refresh_url)
+        if responce.json()["poll"] == True:
+            self.requests_session.get(real_refresh_url)
+
     def day_data(self, days_ago: int) -> dict:
         """ Returns a dictionary containing the data from some number of days_ago. The number of days_ago >= 0. """
         TIME_PERIOD = "day"
@@ -58,7 +73,7 @@ class API:
         return self._fetch_data(TIME_PERIOD, years_ago)
 
     def season_data(self, seasons_ago: int) -> dict:
-        """ Returns a dictionary containing the data from some number of seasons_ago. The number of seasons_ago >= 0."""
+        """ Returns a dictionary containing the data from some number of seasons_ago. The number of seasons_ago >= 0. """
         TIME_PERIOD = "season"
         return self._fetch_data(TIME_PERIOD, seasons_ago)
 

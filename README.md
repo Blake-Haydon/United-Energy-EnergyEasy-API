@@ -18,11 +18,26 @@ pip install git+https://github.com/Blake-Haydon/United-Energy-EnergyEasy-API.git
 poetry add git+https://github.com/Blake-Haydon/United-Energy-EnergyEasy-API.git 
 ```
 
+## Update API
+
+```
+# Using pip
+pip install git+https://github.com/Blake-Haydon/United-Energy-EnergyEasy-API.git --upgrade
+
+
+# Using Poetry
+poetry update
+```
+
+
 ## Example Code
 ```
 # Authenticate with your email and password
 import UnitedEnergy
 ue_api = UnitedEnergy.API(<email>, <password>) 
+
+# Refresh API data to most recent data
+ue_api.refresh_data()
 
 # Possible API Requests
 ue_api.day_data(30)                             # Get data for the day, 30 days ago

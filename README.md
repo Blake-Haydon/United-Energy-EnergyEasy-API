@@ -10,7 +10,7 @@ This is an API implementation to access personal electricity usage data from the
 1. Have a United Energy account (email and password)
 2. Install via pip or poetry
 
-```
+```bash
 # Using pip
 pip install git+https://github.com/Blake-Haydon/United-Energy-EnergyEasy-API.git
 
@@ -20,10 +20,9 @@ poetry add git+https://github.com/Blake-Haydon/United-Energy-EnergyEasy-API.git
 
 ## Update API
 
-```
+```bash
 # Using pip
 pip install git+https://github.com/Blake-Haydon/United-Energy-EnergyEasy-API.git --upgrade
-
 
 # Using Poetry
 poetry update
@@ -31,7 +30,7 @@ poetry update
 
 
 ## Example Code
-```
+```python
 # Authenticate with your email and password
 import UnitedEnergy
 ue_api = UnitedEnergy.API(<email>, <password>) 
@@ -45,3 +44,4 @@ ue_api.week_data(3)                             # Get data for the week, 3 weeks
 ue_api.month_data(15)                           # Get data for the month, 15 months ago
 ue_api.year_data(0)                             # Get data for this year (0 = current)
 ue_api.on_date_data(datetime.date(2020, 3, 15)) # Get daily usage data for 15/3/2020
+```

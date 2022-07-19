@@ -45,8 +45,8 @@ class API:
         real_refresh_url = f"https://energyeasy.ue.com.au/electricityView/isElectricityDataUpdated?lastKnownInterval={latest_interval}&_={unix_time}"
 
         # Run the request to see if the data needs to be updated
-        responce = self.requests_session.get(check_refresh_url)
-        if responce.json()["poll"] == True:
+        res = self.requests_session.get(check_refresh_url)
+        if res.json()["poll"] is True:
             self.requests_session.get(real_refresh_url)
 
     def day_data(self, days_ago: int) -> dict:

@@ -11,13 +11,13 @@ This is an API implementation to access personal electricity usage data from the
 2. Install via pip
 
 ```bash
-pip install https://github.com/Blake-Haydon/United-Energy-EnergyEasy-API/blob/master/dist/united_energy-0.3.0-py3-none-any.whl?raw=true
+pip install https://github.com/Blake-Haydon/United-Energy-EnergyEasy-API/blob/master/dist/united_energy-0.3.1-py3-none-any.whl?raw=true
 ```
 
 ## Update API
 
 ```bash
-pip install https://github.com/Blake-Haydon/United-Energy-EnergyEasy-API/blob/master/dist/united_energy-0.3.0-py3-none-any.whl?raw=true --upgrade
+pip install https://github.com/Blake-Haydon/United-Energy-EnergyEasy-API/blob/master/dist/united_energy-0.3.1-py3-none-any.whl?raw=true --upgrade
 ```
 
 

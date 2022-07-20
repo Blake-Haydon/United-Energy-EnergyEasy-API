@@ -26,8 +26,8 @@ pip install git+https://github.com/Blake-Haydon/United-Energy-EnergyEasy-API.git
 ## Example Code
 ```python
 # Authenticate with your email and password
-import UnitedEnergy
-ue_api = UnitedEnergy.API(<email>, <password>) 
+import united_energy
+ue_api = united_energy.API(<email>, <password>) 
 
 # Refresh API data to most recent data
 ue_api.refresh_data()

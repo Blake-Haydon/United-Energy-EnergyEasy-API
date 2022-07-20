@@ -10,7 +10,7 @@ __pycache__/
 .Python
 build/
 develop-eggs/
-dist/
+# dist/  # Allow to publish to package to GitHub
 downloads/
 eggs/
 .eggs/

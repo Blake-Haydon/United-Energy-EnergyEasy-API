@@ -1,31 +1,36 @@
 # United Energy EnergyEasy API
 
-This is an API implementation to access personal electricity usage data from the [United Energy website](https://energyeasy.ue.com.au/).   
+> **Warning**
+> This API has been deprecated by United Energy. It is no longer possible to access the data from the website. This API will no longer be maintained.
+
+This is an API implementation to access personal electricity usage data from the [United Energy website](https://energyeasy.ue.com.au/).
 
 ## Potential Uses
+
 - Get data every data with a cron job
 - Display live electricity usage
 
 ## Set Up
+
 1. Have a United Energy account (email and password)
 2. Install via pip
 
 ```bash
-pip install https://github.com/Blake-Haydon/United-Energy-EnergyEasy-API/blob/master/dist/united_energy-0.3.1-py3-none-any.whl?raw=true
+pip install https://github.com/Blake-Haydon/United-Energy-EnergyEasy-API/blob/master/dist/united_energy-0.3.2-py3-none-any.whl?raw=true
 ```
 
 ## Update API
 
 ```bash
-pip install https://github.com/Blake-Haydon/United-Energy-EnergyEasy-API/blob/master/dist/united_energy-0.3.1-py3-none-any.whl?raw=true --upgrade
+pip install https://github.com/Blake-Haydon/United-Energy-EnergyEasy-API/blob/master/dist/united_energy-0.3.2-py3-none-any.whl?raw=true --upgrade
 ```
 
-
 ## Example Code
+
 ```python
 # Authenticate with your email and password
 import united_energy
-ue_api = united_energy.API(<email>, <password>) 
+ue_api = united_energy.API(<email>, <password>)
 
 # Refresh API data to most recent data
 ue_api.refresh_data()
